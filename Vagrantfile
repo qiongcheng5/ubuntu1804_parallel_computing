@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
   #   # Display the VirtualBox GUI when booting the machine
      vb.gui = true
      vb.name = "ubuntu1804_parallel_computing"
-     v.default_nic_type = "virtio"
+     vb.default_nic_type = "virtio"
   #
   #   # Customize the amount of memory on the VM:
   #   vb.memory = "1024"
