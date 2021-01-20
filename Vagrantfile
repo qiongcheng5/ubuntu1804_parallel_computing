@@ -74,21 +74,21 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
      sudo apt-get update
-     sudo apt-get --yes install gcc
-     sudo apt-get --yes install g++
-     sudo apt-get --yes install make
-     sudo apt-get --yes install openjdk-8-jre-headless
-     sudo apt-get --yes install libopenmpi-dev
-     sudo apt-get --yes install yum
+     sudo apt-get install -y gcc
+     sudo apt-get install -y g++
+     sudo apt-get install -y make
+     sudo apt-get install -y openjdk-8-jre-headless
+     sudo apt-get install -y libopenmpi-dev
+     sudo apt-get install -y yum
      mkdir tools
      cd tools
      wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/3/eclipse-parallel-oxygen-3-linux-gtk-x86_64.tar.gz
      mv *tar.gz eclipse.tar.gz
      gunzip eclipse.tar.gz
      tar xvf eclipse.tar
-     sudo apt-get --yes install putty
+     sudo apt-get install -y putty
      sudo apt-get update
-     sudo apt-get --yes install filezilla   
+     sudo apt-get install -y filezilla   
 
   #   apt-get install -y apache2
    SHELL
