@@ -74,6 +74,7 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
      sudo apt-get update -y
+     sudo apt-get install -y xinit
      sudo apt-get install -y gcc
      sudo apt-get install -y g++
      sudo apt-get install -y make
@@ -89,7 +90,6 @@ Vagrant.configure("2") do |config|
      sudo apt-get install -y putty
      sudo apt-get update -y
      sudo apt-get install -y filezilla   
-     sudo apt-get install -y xinit
 
   #   apt-get install -y apache2
    SHELL
