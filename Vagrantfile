@@ -73,7 +73,7 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
-     sudo apt-get update
+     sudo apt-get update -y
      sudo apt-get install -y gcc
      sudo apt-get install -y g++
      sudo apt-get install -y make
@@ -87,8 +87,9 @@ Vagrant.configure("2") do |config|
      gunzip eclipse.tar.gz
      tar xvf eclipse.tar
      sudo apt-get install -y putty
-     sudo apt-get update
+     sudo apt-get update -y
      sudo apt-get install -y filezilla   
+     sudo apt-get install -y xinit
 
   #   apt-get install -y apache2
    SHELL
